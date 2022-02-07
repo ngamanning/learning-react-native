@@ -5,7 +5,8 @@ export default function Input(props) {
   return (
     <View style={{ marginVertical: props.spacing ? props.spacing : 0 }}>
       <Text>{props.label}</Text>
-      <TextInput style={styles.input} />
+      <TextInput {...props}
+        style={{...styles.input, ...props.styles}} />
     </View>
   );
 }
